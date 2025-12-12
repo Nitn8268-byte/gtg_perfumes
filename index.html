@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTG Perfumes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- HEADER / NAVBAR -->
+  <header class="header">
+    <div class="page-width header__inner">
+      <a href="#hero" class="logo">GTG</a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="#hero">Home</a></li>
+
+          <li class="nav__item--dropdown">
+            <a href="#product">Shop</a>
+            <span class="nav__caret">▾</span>
+            <ul class="nav__dropdown">
+              <li><a href="#product">GTG Perfumes</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#product">Fragrances</a></li>
+          <li><a href="#promo">About Us</a></li>
+          <li><a href="#promo">Blog</a></li>
+          <li><a href="#compare">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="header__search" aria-label="Search">
+          <span class="header__search-icon"></span>
+        </button>
+        <a href="#product" class="btn btn--primary header__shop-btn">
+          Shop Now
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- FRAME 1: HERO -->
+  <section id="hero" class="hero">
+    <div class="hero__bg">
+      <!-- export this full hero frame (sky + grass + bottle) from Figma -->
+      <img src="assets/hero-full.png" alt="Grass and bottle background" />
+    </div>
+
+    <div class="page-width hero__content-wrap">
+      <div class="hero__left">
+        <div class="hero__badge">
+          <span class="hero__badge-icon">◎</span>
+          <span>Awarded the best perfume in the world</span>
+        </div>
+
+        <h1 class="hero__title">Live your best life.</h1>
+
+        <div class="hero__metrics">
+          <div>
+            <div class="hero__metric-value">10x</div>
+            <div class="hero__metric-label">power</div>
+          </div>
+          <div>
+            <div class="hero__metric-value">9</div>
+            <div class="hero__metric-label">ingredients</div>
+          </div>
+          <div>
+            <div class="hero__metric-value">20K+</div>
+            <div class="hero__metric-label">happy customers</div>
+          </div>
+        </div>
+
+        <a href="#product" class="btn btn--primary hero__cta">
+          Shop Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- FRAME 2: GTG PRODUCT (gallery + plans) -->
+    <section id="product" class="section section--product">
+      <div class="page-width product">
+        <!-- LEFT: gallery -->
+        <article class="card product-gallery">
+          <div class="product-gallery__main">
+            <button
+              class="gallery-arrow gallery-arrow--prev"
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+
+            <img
+              id="gallery-main"
+              src="assets/img (13).png"
+              alt="GTG perfume main"
+            />
+
+            <button
+              class="gallery-arrow gallery-arrow--next"
+              aria-label="Next image"
+            >
+              ›
+            </button>
+          </div>
+
+          <div class="product-gallery__dots" id="gallery-dots">
+            <button class="dot dot--active" data-index="0"></button>
+            <button class="dot" data-index="1"></button>
+            <button class="dot" data-index="2"></button>
+            <button class="dot" data-index="3"></button>
+          </div>
+
+          <div class="product-gallery__thumb-grid" id="gallery-thumbs">
+            <button class="thumb thumb--active" data-index="0">
+              <img src="assets/img (8).png" alt="Variant 1" />
+            </button>
+            <button class="thumb" data-index="1">
+              <img src="assets/img (1).png" alt="Variant 2" />
+            </button>
+            <button class="thumb" data-index="2">
+              <img src="assets/img (2).png" alt="Variant 3" />
+            </button>
+            <button class="thumb" data-index="3">
+              <img src="assets/img (3).png" alt="Variant 4" />
+            </button>
+          </div>
+        </article>
+
+        <!-- RIGHT: GTG Perfumes details with two dropdown plans -->
+        <article class="card product-detail">
+          <header class="product-detail__header">
+            <h2 class="product-detail__title">GTG Perfumes</h2>
+            <p class="product-detail__subtitle">
+              Experience the timeless allure backed by modern artistry, captured in every
+              bottle of our fragrance.
+            </p>
+          </header>
+
+          <div class="product-detail__ribbon">Most Popular</div>
+
+          <!-- PLAN 1: Single Subscription -->
+          <section class="plan plan--single plan--open" data-plan="single">
+            <button class="plan__header" type="button">
+              <div class="plan__title-row">
+                <span
+                  class="plan__radio-indicator plan__radio-indicator--active"
+                ></span>
+                <span class="plan__name">Single Subscription</span>
+              </div>
+              <div class="plan__price-row">
+                <span class="plan__price">$99.99</span>
+                <span class="plan__old-price">$146</span>
+              </div>
+            </button>
+
+            <div class="plan__body">
+              <!-- Choose a fragrance tiles -->
+              <div class="field-group">
+                <h3 class="field-group__label">Choose a Fragrance</h3>
+                <div class="fragrance-grid">
+                  <label class="fragrance-tile fragrance-tile--selected">
+                    <input
+                      type="radio"
+                      name="fragrance"
+                      value="original"
+                      checked
+                    />
+                    <span class="fragrance-tile__badge">BEST‑SELLER</span>
+                    <img src="assets/img (13).png" alt="Original" />
+                    <span class="fragrance-tile__name">Original</span>
+                  </label>
+
+                  <label class="fragrance-tile">
+                    <input type="radio" name="fragrance" value="lily" />
+                    <img src="assets/img (7).png" alt="Lily" />
+                    <span class="fragrance-tile__name">Lily</span>
+                  </label>
+
+                  <label class="fragrance-tile">
+                    <input type="radio" name="fragrance" value="rose" />
+                    <img src="assets/img (6).png" alt="Rose" />
+                    <span class="fragrance-tile__name">Rose</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- What's included – mini tabs -->
+              <div class="field-group">
+                <h3 class="field-group__label">What’s Included:</h3>
+
+                <div class="included-tabs">
+                  <button
+                    class="included-tab included-tab--active"
+                    data-included="every30"
+                  >
+                    Every 30 Days
+                  </button>
+                  <button
+                    class="included-tab"
+                    data-included="onetime"
+                  >
+                    One Time <span class="included-tab__free">(Free)</span>
+                  </button>
+                </div>
+
+                <div class="included-panels">
+                  <div
+                    class="included-panel included-panel--active"
+                    data-included="every30"
+                  >
+                    <img
+                      src="assets/img (13).png"
+                      alt="Every 30 days set"
+                    />
+                  </div>
+                  <div
+                    class="included-panel"
+                    data-included="onetime"
+                  >
+                    <img src="assets/img (4).png" alt="One time set" />
+                  </div>
+                </div>
+              </div>
+
+              <ul class="plan-list">
+                <li>1 Bottle Shipped Monthly</li>
+                <li><strong>Free</strong> sampler for all fragrances</li>
+                <li><strong>50% OFF</strong> shipping</li>
+                <li>Pause or cancel anytime after 3 months minimum</li>
+                <li>28 Day Money Back Guarantee*</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- PLAN 2: Double Subscription -->
+          <section class="plan plan--double" data-plan="double">
+            <button class="plan__header" type="button">
+              <div class="plan__title-row">
+                <span class="plan__radio-indicator"></span>
+                <span class="plan__name">Double Subscription</span>
+              </div>
+              <div class="plan__price-row">
+                <span class="plan__price">$169.99</span>
+                <span class="plan__old-price">$246</span>
+              </div>
+            </button>
+
+            <div class="plan__body">
+              <p class="plan__body-text">
+                Two bottles each month with all the benefits of the Single plan,
+                designed for couples and collectors.
+              </p>
+            </div>
+          </section>
+
+          <!-- Add to Cart button -->
+          <footer class="product-detail__footer">
+            <a
+              href="#"
+              id="add-to-cart"
+              class="btn btn--primary product-detail__cta"
+            >
+              Add to Cart
+            </a>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- FRAME 3: OUR COLLECTION ACCORDION -->
+    <section id="collection" class="section section--collection">
+      <div class="page-width collection">
+        <div class="collection__left">
+          <h2 class="collection__title">Our Collection</h2>
+
+          <div class="accordion">
+            <article class="accordion__item accordion__item--open">
+              <button class="accordion__header" type="button">
+                <span class="accordion__label">Signature Scents</span>
+                <span class="accordion__icon">−</span>
+              </button>
+              <div class="accordion__body">
+                <p>
+                  Discover our curated line of signature perfumes, designed to
+                  become your daily companion.
+                </p>
+              </div>
+            </article>
+
+            <article class="accordion__item">
+              <button class="accordion__header" type="button">
+                <span class="accordion__label">Signature Scents</span>
+                <span class="accordion__icon">+</span>
+              </button>
+              <div class="accordion__body">
+                <p>
+                  Content for the second category goes here. Replace with the
+                  real copy from Figma.
+                </p>
+              </div>
+            </article>
+
+            <article class="accordion__item">
+              <button class="accordion__header" type="button">
+                <span class="accordion__label">Signature Scents</span>
+                <span class="accordion__icon">+</span>
+              </button>
+              <div class="accordion__body">
+                <p>Content for the third category goes here.</p>
+              </div>
+            </article>
+
+            <article class="accordion__item">
+              <button class="accordion__header" type="button">
+                <span class="accordion__label">Signature Scents</span>
+                <span class="accordion__icon">+</span>
+              </button>
+              <div class="accordion__body">
+                <p>Content for the fourth category goes here.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <figure class="collection__image-wrap">
+          <img
+            src="assets/img (5).png"
+            alt="Hands with perfume and mirror"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+    </section>
+    <!-- FRAME 4: SIDE PROMO (matches Figma mid‑section) -->
+    <section id="promo" class="section section--promo">
+      <div class="page-width promo">
+        <figure class="promo__image-wrap">
+          <img
+            src="assets/blog-img.avif"
+            alt="Woman wearing perfume"
+            loading="lazy"
+          />
+        </figure>
+
+        <article class="promo__copy card">
+          <h2>Fragrance that fits your story.</h2>
+          <p>
+            Crafted by expert perfumers, GTG balances top, heart, and base
+            notes for a signature scent that stays with you.
+          </p>
+          <p>
+            Switch between purchase types and fragrances without losing your
+            preferences, exactly as designed in the Figma flow.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FRAME 5: PERCENTAGE / STATS STRIP -->
+<section id="stats" class="section section--stats"> <!--id stats is used by the nav anchor and js scroll logic-->
+  <div class="page-width stats">
+    <article class="stat">
+      <span class="stat__number" data-target="84">0</span>
+      <span class="stat__label">
+        Lorem ipsum dolor sit amet,<br />
+        consectetur adipiscing elit
+      </span>
+    </article>
+    <article class="stat">
+      <span class="stat__number" data-target="78">0</span>
+      <span class="stat__label">
+        Lorem ipsum dolor sit amet,<br />
+        consectetur adipiscing elit
+      </span>
+    </article>
+    <article class="stat">
+      <span class="stat__number" data-target="89">0</span>
+      <span class="stat__label">
+        Lorem ipsum dolor sit amet,<br />
+        consectetur adipiscing elit
+      </span>
+    </article>
+    <article class="stat">
+      <span class="stat__number" data-target="90">0</span>
+      <span class="stat__label">
+        Lorem ipsum dolor sit amet,<br />
+        consectetur adipiscing elit
+      </span>
+    </article>
+  </div>
+</section>
+
+
+    <!-- FRAME 6: COMPARISON TABLE -->
+    
+<section id="compare" class="section section--compare">
+  <div class="page-width">
+    <div class="compare__dash">---</div>
+    <h2 class="compare__title">Why GTG is the #1 Choice</h2>
+
+    <div class="card compare__card">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="compare-table__qualities">Qualities</th>
+
+            <!-- GTG column with image -->
+            <th class="compare-table__brand compare-table__brand--gtg">
+              <div class="compare-table__brand-inner">
+                <img src="assets/img (4).png" alt="GTG bottle" />
+                <span>GTG</span>
+              </div>
+            </th>
+
+            <th class="compare-table__brand">
+              <div class="compare-table__brand-inner">
+                <img src="assets/img (3).png" alt="Arose" />
+                <span>Arose</span>
+              </div>
+            </th>
+            <th class="compare-table__brand">
+              <div class="compare-table__brand-inner">
+                <img src="assets/img (2).png" alt="Bella" />
+                <span>Bella</span>
+              </div>
+            </th>
+            <th class="compare-table__brand">
+              <div class="compare-table__brand-inner">
+                <img src="assets/img (1).png" alt="Daisies" />
+                <span>Daisies</span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Potency Concentration</td>
+            <td class="compare-table__gtg-cell">             10x</td>
+            <td>1x</td>
+            <td>1x</td>
+            <td>10x</td>
+          </tr>
+          <tr>
+            <td>Longevity</td>
+            <td class="compare-table__gtg-cell compare-table__icon">✔</td>
+            <td class="compare-table__icon">✖</td>
+            <td class="compare-table__icon">✖</td>
+            <td class="compare-table__icon">✔</td>
+          </tr>
+          <tr>
+            <td>Sillage</td>
+            <td class="compare-table__gtg-cell compare-table__icon">✔</td>
+            <td class="compare-table__icon">✖</td>
+            <td class="compare-table__icon">✖</td>
+            <td class="compare-table__icon">✔</td>
+          </tr>
+          <tr>
+            <td>Bottle Design Score</td>
+            <td class="compare-table__gtg-cell">9</td>
+            <td>5</td>
+            <td>6</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Blend and Harmony</td>
+            <td class="compare-table__gtg-cell compare-table__icon">✔</td>
+            <td class="compare-table__icon">✖</td>
+            <td class="compare-table__icon">✔</td>
+            <td class="compare-table__icon">✖</td>
+          </tr>
+          <tr>
+            <td>Skin Compatibility</td>
+            <td class="compare-table__gtg-cell compare-table__icon">✔</td>
+            <td class="compare-table__icon">✖</td>
+            <td class="compare-table__icon">✖</td>
+            <td class="compare-table__icon">✖</td>
+          </tr>
+          <tr>
+            <td>Scent Profile</td>
+            <td class="compare-table__gtg-cell compare-table__icon">✔</td>
+            <td class="compare-table__icon">✔</td>
+            <td class="compare-table__icon">✖</td>
+            <td class="compare-table__icon">✔</td>
+          </tr>
+          <tr>
+            <td>Price vs. Quality</td>
+            <td class="compare-table__gtg-cell compare-table__icon">✔</td>
+            <td class="compare-table__icon">✔</td>
+            <td class="compare-table__icon">✖</td>
+            <td class="compare-table__icon">✔</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="compare__cta-wrap">
+      <a href="#product" class="btn btn--primary compare__cta">
+        Try It Risk‑Free
+      </a>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+  <div class="page-width footer__inner">
+    <!-- Left: logo + nav columns -->
+    <div class="footer__brand">
+      <div class="footer__logo">GTG</div>
+
+      <div class="footer__links">
+        <div class="footer__column">
+          <a href="#hero">Home</a>
+          <a href="#product">Shop</a>
+          <a href="#product">Fragrances</a>
+        </div>
+        <div class="footer__column">
+          <a href="#promo">About Us</a>
+          <a href="#promo">Blog</a>
+          <a href="#compare">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle: social -->
+    <div class="footer__social">
+      <a href="#" class="footer__social-item">
+        <span class="footer__social-icon">f</span>
+        <span>Facebook</span>
+      </a>
+      <a href="#" class="footer__social-item">
+        <span class="footer__social-icon">◎</span>
+        <span>Instagram</span>
+      </a>
+      <a href="#" class="footer__social-item">
+        <span class="footer__social-icon">X</span>
+        <span>X</span>
+      </a>
+    </div>
+
+    <!-- Right: newsletter -->
+    <div class="footer__newsletter">
+      <p class="footer__newsletter-title">
+        Join our newsletter to stay up to date on features and releases.
+      </p>
+
+      <form class="footer__form" action="#" method="post">
+        <input
+          type="email"
+          class="footer__input"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit" class="footer__submit">
+          Subscribe
+        </button>
+      </form>
+
+      <p class="footer__disclaimer">
+        By subscribing you agree to with our
+        <a href="#">Privacy Policy</a> and provide consent to receive updates
+        from our company.
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
